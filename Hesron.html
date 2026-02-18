@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VisionLink Accessibility Dashboard</title>
+    <style>
+        body { 
+            background-color: black; 
+            color: yellow; 
+            font-family: sans-serif; 
+            font-size: 24px;
+            padding: 50px;
+        }
+        button {
+            background: #333;
+            color: white;
+            padding: 20px;
+            font-size: 30px;
+            border: 5px solid yellow;
+            width: 100%;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        button:focus { background: yellow; color: black; }
+    </style>
+</head>
+<body>
+    <h1>VisionLink System Menu</h1>
+    <p>Use TAB to move between buttons. Press ENTER to select.</p>
+    
+    <button id="checkBattery" aria-label="Check Battery Level">Check Battery Status</button>
+    <button id="checkTime" aria-label="What time is it?">Current Time</button>
+    <button id="openExplorer" aria-label="Open File Explorer">Open My Documents</button>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
