@@ -1,1 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morobe Tourism</title>
+    <style>
+        /* Color Palette */
+        :root {
+            --primary-blue: #0077B6;    /* Ocean */
+            --primary-green: #2D6A4F;   /* Jungle */
+            --accent-yellow: #FFD60A;   /* Sunshine */
+            --text-dark: #1B4332;
+            --light-bg: #F8F9FA;
+        }
 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: var(--primary-blue) url('banner.png') no-repeat center center;
+            background-size: cover;
+            height: 60vh; /* Professional 3:1 feel on desktop */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--accent-yellow);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            text-align: center;
+            border-bottom: 8px solid var(--primary-green);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary-green);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 5px 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a:focus {
+            color: var(--accent-yellow);
+            outline: 2px solid var(--accent-yellow);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-bottom: 5px solid var(--primary-blue);
+        }
+
+        .card-content { padding: 20px; }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        .btn:hover { background: var(--primary-green); }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero" role="banner">
+        <h1>Explore Morobe</h1>
+        <p style="font-size: 1.5rem;">Where the Mountains Meet the Sea</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#culture">Culture</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="welcome-section">
+            <h2 style="color: var(--primary-green);">Discover Papua New Guinea's Heart</h2>
+            <p>From the bustling streets of Lae to the serene waters of the Huon Gulf, Morobe offers an untouched paradise for the modern adventurer.</p>
+        </section>
+
+        <section id="destinations" class="card-grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3 style="color: var(--primary-blue);">Huon Gulf Adventures</h3>
+                    <p>Experience world-class diving and pristine beaches just a short boat ride from the mainland.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3 style="color: var(--primary-blue);">Lae Botanical Gardens</h3>
+                    <p>Walk through a lush canopy of tropical flora and discover the unique orchids of Morobe.</p>
+                    <a href="#" class="btn">Explore Nature</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3 style="color: var(--primary-blue);">Highland Gateway</h3>
+                    <p>The starting point for your journey into the mysterious and beautiful Highlands of PNG.</p>
+                    <a href="#" class="btn">Start Journey</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Morobe Tourism Authority. All Rights Reserved.</p>
+        <p style="color: var(--accent-yellow);">Visit the Jewel of the Huon Gulf</p>
+    </footer>
+
+</body>
+</html>
