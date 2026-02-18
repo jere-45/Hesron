@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Morobe Tourism</title>
+    <title>About | Morobe</title>
     <style>
         :root { --blue: #0077B6; --green: #2D6A4F; --yellow: #FFD60A; --light: #F8F9FA; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--light); margin: 0; }
+        body { font-family: sans-serif; background: var(--light); margin: 0; }
         nav { background: var(--green); padding: 1rem; display: flex; justify-content: center; gap: 15px; border-bottom: 4px solid var(--yellow); }
         nav a { color: white; text-decoration: none; font-weight: bold; padding: 8px 15px; }
-        .active { background: var(--yellow); color: var(--green); border-radius: 5px; }
-        .page-header { background: var(--blue); color: white; padding: 60px 20px; text-align: center; }
-        .content { max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.8; background: white; border-radius: 10px; }
+        .content { max-width: 900px; margin: 40px auto; padding: 40px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .hero-sub { background: var(--blue); color: white; text-align: center; padding: 40px; }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
+        <a href="about.html" style="background: var(--yellow); color: var(--green); border-radius: 5px;">About</a>
         <a href="destinations.html">Destinations</a>
         <a href="culture.html">Culture</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <header class="page-header"><h1>Our Story</h1></header>
+    <header class="hero-sub"><h1>Discover Morobe</h1></header>
     <main class="content">
-        <h2 style="color: var(--green);">History & Mission</h2>
-        <p>Morobe Province is a land of diversity, housing over 100 languages. We are the gateway to the Highlands and the Islands. Our mission is to promote sustainable tourism that respects our local traditions and preserves our natural beauty for generations to come.</p>
+        <h2 style="color: var(--green);">Our Land, Our People</h2>
+        <p>Morobe Province is located on the northern coast of Papua New Guinea. It is the most populous province in the country and serves as the primary industrial hub. With over <strong>100 distinct languages</strong>, our cultural diversity is our greatest strength.</p>
+        <p>From the Markham Valley to the Siassi Islands, Morobe offers everything from tropical reef ecosystems to alpine grasslands.</p>
+        <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=800" alt="Local PNG Village" style="width:100%; border-radius: 10px; margin-top: 20px;">
     </main>
 </body>
 </html>
