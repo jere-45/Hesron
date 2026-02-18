@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morobe Tourism</title>
+    <style>
+        /* Color Palette & Variables */
+        :root {
+            --primary-blue: #0077B6;    /* Ocean */
+            --primary-green: #2D6A4F;   /* Jungle */
+            --accent-yellow: #FFD60A;   /* Sunshine */
+            --text-dark: #1B4332;
+            --light-bg: #F8F9FA;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* --- RESPONSIVE BANNER --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('banner.png') no-repeat center center;
+            background-size: cover;
+            min-height: 300px; /* Good for mobile */
+            height: 50vh;      /* Good for desktop */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--accent-yellow);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 4rem); /* Text shrinks/grows with screen */
+            margin-bottom: 10px;
+        }
+
+        /* --- RESPONSIVE NAVIGATION --- */
+        nav {
+            background: var(--primary-green);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap on small screens */
+            justify-content: center;
+            gap: 15px;
+            border-bottom: 4px solid var(--accent-yellow);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a:focus {
+            background: var(--accent-yellow);
+            color: var(--primary-green);
+        }
+
+        /* --- RESPONSIVE LAYOUT --- */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* The Grid: 1 column on mobile, 3 columns on desktop */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for phones */
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--primary-blue);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-content { padding: 25px; }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* --- MEDIA QUERIES (The "Magic" for Desktop) --- */
+        @media (min-width: 768px) {
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns */
+            }
+            nav a {
+                font-size: 1.1rem;
+            }
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero" role="banner">
+        <h1>Explore Morobe</h1>
+        <p>The Jewel of Papua New Guinea</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#culture">Culture</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="welcome-section">
+            <h2 style="color: var(--primary-green);">Experience the Tropics</h2>
+            <p>Welcome to Morobe, where vibrant culture meets the calm waters of the Huon Gulf.</p>
+        </section>
+
+        <section id="destinations" class="card-grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3 style="color: var(--primary-blue);">Salamaua Coast</h3>
+                    <p>Crystal clear waters and historic WWII sites await you along the coast.</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3 style="color: var(--primary-blue);">Wau-Bulolo Valley</h3>
+                    <p>Discover the golden history and the mist-covered mountains of the interior.</p>
+                    <a href="#" class="btn">Discover</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3 style="color: var(--primary-blue);">Lae City Life</h3>
+                    <p>The Garden City offers botanic wonders and the warmest hospitality in PNG.</p>
+                    <a href="#" class="btn">Visit Lae</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Morobe Tourism Authority</p>
+    </footer>
+
+</body>
+</html>
